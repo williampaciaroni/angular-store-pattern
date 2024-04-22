@@ -1,0 +1,13 @@
+<div>
+  <h2>Todos</h2>
+  <ul *ngFor="let item of todos | async">
+    <span>{{ item.id }}</span>
+    <button (click)="removeTodo(item)">Remove</button>
+  </ul>
+
+  <div>
+    <label for="todoId">ID:</label>
+    <input type="text" id="todoId" [(ngModel)]="newTodoId" />
+    <button (click)="addTodo()">Add Todo</button>
+  </div>
+</div>
